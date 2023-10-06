@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تحويل النص إلى صوت</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #text-input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #language-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; /* تغيير هنا للوسط */
+            margin-bottom: 10px;
+        }
+
+        #language-select {
+            margin-right: 10px;
+            padding: 10px;
+            width: 150px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #convert-button {
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #convert-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>تحويل النص إلى صوت</h1>
+        <textarea id="text-input" rows="4" cols="50" placeholder="اكتب النص هنا"></textarea>
+        <div id="language-container">
+            <select id="language-select">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <button id="convert-button">تحويل إلى صوت</button>
+    </div>
+    <script src="gtts.js"></script>
+</body>
+
+</html>
